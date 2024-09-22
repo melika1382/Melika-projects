@@ -1,0 +1,209 @@
+:root{
+    --textColor: beige;
+    --backgroundColor: black;
+    --productTextColor: #583101;
+    --productBorderColor: #603808;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar nav{
+    position: relative;
+    z-index: 1;
+    text-align: end;
+    margin-top: -90px;
+    background-color: black;
+    opacity: 80%;
+    padding: 20px;
+}
+.navbar:first-child{
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    margin: 20px 0px 0px 0px;
+}
+.navbar:first-child img{
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+.navbar nav ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.navbar nav li a{
+    position: relative;
+    margin-right: 50px;
+    text-decoration-line: none;
+    color: var(--textColor);
+}
+#home::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--textColor);
+    border-radius: 5px;
+}
+.navbar nav li a::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--textColor);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all .5s ease;
+}
+.navbar nav li a:not(#home):hover:before{
+    transform: scaleX(1);
+}
+
+
+.description h1{
+    position: absolute;
+    bottom: 40%;
+    z-index: 2;
+    margin-left: 15px;
+    font-size: 50px;
+    color: var(--textColor);
+}
+.description p{
+    position: absolute;
+    bottom: 17%;
+    z-index: 2;
+    margin-left: 15px;
+    color: var(--textColor);
+}
+.description a{
+    display: inline-block;
+    text-decoration-line: none;
+    background: #4c3228;
+    color: var(--textColor);
+    padding: 8px 20px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.description a:hover{
+    background: #8b6c5c;
+}
+
+
+.slider{
+    position: relative;
+    bottom: 50%;
+    margin-top: -120px;
+    max-width: 100%;
+    max-height: 50%;
+    z-index: 0;
+}
+.mySlides{
+    display: none;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 4s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.footer{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding: 80px;
+    background-color: var(--backgroundColor);
+    opacity: 80%;
+    color: var(--textColor);
+}
+.footer div span:first-child{
+    margin-top: -40px;
+    margin-left: -40px;
+    font-style: italic;
+    font-weight: bold;
+    float: left;
+}
+.footer div span:last-child{
+    margin-top: -40px;
+    margin-right: -40px;
+    font-style: italic;
+    float: right;
+}
+.footer:last-child{
+    font-style: italic;
+    text-align: center;
+}
+
+
+@media all and (max-width: 600px) {
+    .description h1{
+        font-size: 35px;
+        text-align: center;
+        left: 15%;
+        top: 30%;
+    }
+    .description p{
+        text-align: center;
+        left: 20%;
+        top: 50%;
+    }
+    .navbar nav ul{
+        flex-direction: column;
+    }
+    .navbar nav li a{
+       margin-right: 10px;
+    }
+    .slider{
+        margin-top: -34%;
+    }
+    .navbar nav{
+        padding: 5px;
+    }
+  }
+  @media all and (min-width: 600px) {
+    .description h1{
+        font-size: 50px;
+        text-align: center;
+        left: 15%;
+        top: 30%;
+    }
+    .description p{
+        text-align: center;
+        left: 27%;
+        top: 55%;
+    }
+  }
+  @media all and (min-width: 800px) {
+    .description h1{
+        margin-left: 15px;
+        font-size: 50px;
+        text-align: start;
+        bottom: 40%;
+        left: 0%;
+    }
+    .description p{
+        text-align: start;
+        bottom: 17%;
+        left: 0%;
+    }
+  }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>E-commerce Website</title>
+        <link rel="icon"  href="./imags/Brown and Beige Modern Bookstore Logo.jpg">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="store, HTML, shop">
+        <link rel="stylesheet" href="./css/headerStyle.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <!-- navbar and logo -->
+            <div class="navbar">
+                <span>
+                    <img src="./imags/Brown and Beige Modern Bookstore Logo.jpg" width="125px" height="125px"/>
+                </span>
+                <nav>
+                    <ul>
+                        <li><a href="#footerinfo">Contact us</a></li>
+                        <li><a href="./products.html">Prodcuts</a></li>
+                        <li><a href="" id="home">Home</a></li>
+                    </ul>
+                </nav>
+            </div> 
+            <!-- paragraph -->
+            <div class="description">
+                <div>
+                    <h1>
+                        Read more books! 
+                        <br/>
+                        You need that...
+                    </h1>
+                    <p>
+                        Here you can find any kind of books
+                        <br/>
+                        Just take a look!... 
+                        <br/>
+                        <a href="./products.html">Buy Now</a>
+                    </p>                  
+                </div>
+                <!-- banner -->
+                <div class="slider">
+                    <div class="slides">
+                        <div class="mySlides fade">
+                            <img src="./imags/Dark Brown Aesthetic Library.jpg" alt="img 1" style="width:100%;height: 800px;">
+                        </div>
+                              
+                        <div class="mySlides fade">
+                            <img src="./imags/download.jpg" alt="img 2" style="width:100%;height: 800px;">
+                        </div>
+                              
+                        <div class="mySlides fade">
+                            <img src="./imags/download2.jpg" alt="img 3" style="width:100%;height: 800px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- footer part -->
+        <footer id="footerinfo">
+            <div class="footer">
+                <div>
+                    <span>Contact</span>
+                    <span>01234567</span>
+                </div>
+                <br/>
+                <div>
+                    <span>E-mail</span>
+                    <span>adress@gmail.com</span>
+                </div>
+                <br/>
+                <div>
+                    <span>Instagram</span>
+                    <span>@pageAdress</span>
+                </div>
+                <hr>
+                <span>www.webAdress.com</span>
+            </div>
+        </footer>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+
+                slideIndex++;
+
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                slides[slideIndex-1].style.display = "block";  
+                setTimeout(showSlides, 5000);
+            }
+        </script>
+    </body>
+</html>
